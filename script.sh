@@ -1,7 +1,4 @@
-
-
-
-sudo /usr/local/bin/cloud-provider-kind
+#sudo /usr/local/bin/cloud-provider-kind
 
 kind create cluster -n cloud
 
@@ -29,4 +26,5 @@ export SECURE_INGRESS_PORT=$(kubectl -n "$INGRESS_NS" get service "$INGRESS_NAME
 export TCP_INGRESS_PORT=$(kubectl -n "$INGRESS_NS" get service "$INGRESS_NAME" -o jsonpath='{.spec.ports[?(@.name=="tcp")].port}')
 
 export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
+echo "Gateway URL: " $GATEWAY_URL
 
