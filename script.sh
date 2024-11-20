@@ -1,4 +1,4 @@
-#sudo /usr/local/bin/cloud-provider-kind
+# sudo /usr/local/bin/cloud-provider-kind
 
 kind create cluster -n cloud
 
@@ -10,7 +10,7 @@ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.24/samp
 
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.24/samples/addons/prometheus.yaml
 
-istioctl dashboard grafana
+# istioctl dashboard grafana
 
 kubectl label namespace default istio-injection=enabled
 
